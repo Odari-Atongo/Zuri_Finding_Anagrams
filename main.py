@@ -4,8 +4,22 @@
 # find_anagrams("below", "elbow") --> True
 
 
-def find_anagram(word, anagram):
-    # [assignment] Add your code here
+from ast import Return
 
-    return True
+
+def find_anagram(word, anagram):
+    # Change the word and the anagram to lowercase
+    word = word.lower()
+    anagram=anagram.lower()
+    
+    # Remove the white space from the word and the anagram 
+    word = word.replace(" ", "")
+    anagram=anagram.replace(" ", "")
+     
+    #  Sort the word and the anagram 
+    return sorted(word) == sorted(anagram)
+
+print(find_anagram("silent", "listen"))
+print(find_anagram("elvis","lives"))
+
 
